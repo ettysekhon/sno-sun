@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 type WeatherSummaryProps = {
   temp: number;
   summary: string;
@@ -15,7 +17,7 @@ export const WeatherSummary = ({
 }: WeatherSummaryProps) => (
   <section className="flex items-center justify-center flex-col">
     <div className="pt-8 text-3xl">
-      <i className="before:content-['\edb9']"></i>
+      <Image src="/location.png" alt="location" width="32" height="32" />
       <span>{location}</span>
     </div>
     <div className="pt-2 text-7xl">{`${temp}°`}</div>
